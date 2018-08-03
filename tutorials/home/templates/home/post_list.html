@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block body %}
+
+    {% for post in posts %}
+            <div class="post">
+                Title : <h4><a href=" {% url 'post_detail' post.pk %} ">{{ post.title }}</a></h4>
+
+                    <div class="posts">
+                       Post: <h4> <p>{{ post.post|linebreaksbr }}</p> </h4>
+                    </div>
+
+                    <div class="date">
+                        {{ post.date }}  Posted by: {{ post.user }}
+                    </div>
+
+                    <br>
+
+                    <br>
+
+
+                    {% block login  %}
+                    {% endblock %}
+
+
+
+
+                    {% block register  %}
+                    {% endblock %}
+
+
+
+
+
+            </div>
+    {% endfor %}
+
+{% endblock %}

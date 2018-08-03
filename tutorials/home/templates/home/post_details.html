@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+
+
+
+{% block body %}
+
+      <h1>  {{ posts.title }}  </h1>
+
+      <p>{{ posts.post|linebreaksbr }}</p>
+
+      Posted by: {{ posts.user }}
+
+                  {% for comment in comments %}
+
+                      <h3>author : {{ comment.author}}</h1>
+                      <h3>comments : {{ comment.comment}}</h3>
+
+                  {% endfor %}
+
+  <div class="conatiner">
+
+
+<br>  <a class="btn btn-success" href="/home/post_edit/{{posts.pk}}">Post Edit</a>
+  <a class="btn btn-success" href="/home/post_remove/{{posts.pk}}">Remove Post</a>
+  <a class="btn btn-success" href="/home/post_like/{{posts.pk}}">Like Post</a>
+  </div>
+<br>LIKES :{{ post.likes }}
+{% endblock %}
+{% block login  %}
+{% endblock %}
+{% block register  %}
+{% endblock %}

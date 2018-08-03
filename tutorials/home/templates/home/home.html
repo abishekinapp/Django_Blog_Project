@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head  %}
+
+<title>posts_list</title>
+
+{% endblock %}
+
+
+{% block body  %}
+
+<h1>Create Post</h1>
+
+<form method="post">
+
+  {% csrf_token %}
+
+  {{form.as_p}}
+
+<button type="submit" name="button" >submit</button>
+
+<a href="/home/postlist/">View All Posts</a>
+
+
+</form>
+
+
+{% endblock %}
+{% block login  %}
+{% endblock %}
+{% block register  %}
+{% endblock %}

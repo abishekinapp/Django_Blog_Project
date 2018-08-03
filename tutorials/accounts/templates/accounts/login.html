@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body  %}
+
+<center>
+
+<font face="verdana" color="Grey" size='50' ><big>Welcome</big></font>
+    <br>
+    <br>
+    <small><h5>      LOGIN HERE!!!</h5> </small>
+
+    <form method="post">
+
+
+
+      {% csrf_token %}
+{{form|crispy}}
+
+     <button type="submit" class="btn btn-outline-danger">login</a></button>
+
+    </form>
+
+    {% block login  %}
+    {% endblock %}
+
+    {% block logout  %}
+    {% endblock %}
+
+    {% block profile  %}
+    {% endblock %}
+
+    {% block editprofile  %}
+    {% endblock %}
+
+    {% block changepassword  %}
+    {% endblock %}
+
+    {% block chat  %}
+    {% endblock %}
+
+
+    {% block addpost  %}
+    {% endblock %}
+
+    {% block home  %}
+    {% endblock %}
+
+    {% block register  %}
+  
+    {% endblock %}
+
+</center>
+
+{% endblock %}
