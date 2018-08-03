@@ -5,8 +5,11 @@ This Blogging app is created on the Python Django Framework . This web app is fe
 Requirements:
 
 1.pip install -r requirements.txt
-or use virtual environment: source ven/bin/activate
+or use virtual environment: source ven/bin/activate.
+
 2.To run development server: python manage.py runserver
+
 3.To run redis server: sudo docker run -p 6379:6379 -d redis:2.8
 (redis server allows asynchronous communication)
+
 4.To run development server: python3 manage.py runserver 5000
